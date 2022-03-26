@@ -1,4 +1,6 @@
-List app, compatible with Chrome, Firefox, and Android devices.  
+[List app](http://listsjs.s3-website-us-east-1.amazonaws.com/) (< Live Demo)
+Compatible with Chrome, Firefox, and Android devices. 
+
 Run:
 
 ### `npm start`
