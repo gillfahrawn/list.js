@@ -1,0 +1,143 @@
+.cancelDone {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cancel {
+    display: flex;
+}
+
+.spacer4 {
+    height: 32px;
+    width: 40px;
+}
+
+.cancelBtn {
+    background-color: #FFFF;
+    border: none;
+    display: flex;
+    align-items: center;
+   
+}
+
+.cancelText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    letter-spacing: -0.005em;
+    color: #505050;
+}
+
+.cancelImg {
+    display: flex;
+    padding-right: 6.25px
+}
+
+
+.done {
+    display: flex;
+}
+
+.doneBtn {
+    background-color: #FFFF;
+    border: none;
+}
+
+.doneText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    letter-spacing: -0.005em;
+    color: #505050;
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: #ffff;
+    font-family: Inter;
+}
+
+textarea {
+    margin-top: -24px;
+    position: absolute; /*for left and right margins to work*/
+    left: 40px;
+    right: 40px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none; /*removes the resize handle*/
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    /* line-height: 26px; */
+    /* identical to box height, or 93% */
+
+    letter-spacing: -0.01em;
+
+    /* Off-Black */
+    color: #242424;
+    caret-color: #2FE6FF;
+}
+
+#area1 {
+    /*design specifies: space under line=24 pixels, font=26 pixels*/
+    line-height: calc(24px*2 + 1em);
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1039px) {    
+    .spacer4 {
+        height: 32px;
+        width: 24px;
+    }
+
+    textarea {
+        margin-top: -24px;
+        position: absolute; /*for left and right margins to work*/
+        left: 24px;
+        right: 24px;
+        border: none;
+        overflow: auto;
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        resize: none; /*removes the resize handle*/
+    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        /* line-height: 26px; */
+        /* identical to box height, or 93% */
+    
+        letter-spacing: -0.01em;
+    
+        /* Off-Black */
+        color: #242424;
+        caret-color: #2FE6FF;
+    }    
+}

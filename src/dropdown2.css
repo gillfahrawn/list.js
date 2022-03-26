@@ -1,0 +1,84 @@
+
+.dropItem { /*positions shadowbox in div*/
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editBtn {
+    position: relative;
+    width: 92px;
+    height: 54px;
+
+    padding-top: 0px;
+    /* padding-right: 22px; */
+    background-color: #FFFF;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+   
+}
+
+.editText {
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    letter-spacing: -0.005em;
+    
+    right: 12px;
+}
+
+.editImg {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+.deleteBtn {
+    width: 115px;
+    height: 50px;
+
+    padding-top: 0px;
+    background-color: #FFFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+   
+}
+
+.deleteText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    letter-spacing: -0.005em;
+}
+
+.deleteImg {
+    /* display: flex; */
+    padding-right: 8px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 1039px) {    }
+@media only screen and (min-width: 1040px) {    }

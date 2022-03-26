@@ -181,8 +181,6 @@ function Item({ item, index, removeItem }) {
   const wrapperRef = useRef(null);  //used in itemClickCheck below, for detecting outside clicks
   const [itemColor, setItemColor] = useState(['#FFFFFFF', 'none']);
   const [ellipsisDown, setEllipsisDown] = useState(false);
-  const [outUp, setOutUp] = useState(false);
-  const [elCt, setElCt] = useState(0);
   const [ellipsisHover, setEllipsisHover] = useState(false);
   const [ellipsisToggle, setEllipsisToggle] = useState(false);
   const [ellipsisColor, setEllipsisColor] = useState(
@@ -312,7 +310,6 @@ function Item({ item, index, removeItem }) {
     //   const color = '#FFFFFF';
     //   setItemColor([color, shadow]); 
     // }
-
     let target = e.target.className;
     if (ellipsisDown && target =='regItem') { //to prevent down on ellipses > up on regItem from registering as a click on regItem
       console.log("IN IF")
@@ -333,28 +330,13 @@ function Item({ item, index, removeItem }) {
 
   const padClickCheck = (e) => { //required because onClick on itemPad doesn't register as an outClick
       console.log("TARGET IS REGITEM!!!!!*******");
-      if (ellipsisDown && e.target.className != 'ellipsis') {
-        setElCt(0);
-        setOutUp(true);
-      }
+      setEllipsisToggle(false);
   }
 
 
   const toggleDropdown = (e) => {  
-    if (outUp) {
-      console.log("ELSE IF 0");
-      if (elCt == 0 && !ellipsisToggle) {
-        e.target.blur();
-      }
-        const newct = elCt + 1;
-        setElCt(newct);
-        setEllipsisToggle(true);
-        setOutUp(false);
-        forceUpdate();
-    }
-
-    else if (outClicked && ellipsisToggle) {
-      console.log("ELSE IF 0.5");
+    if (outClicked && ellipsisToggle) {
+      console.log("IF STATEMENT");
       e.target.blur();
       ellipsisCount++;
       setEllipsisToggle(true);
@@ -373,11 +355,10 @@ function Item({ item, index, removeItem }) {
       forceUpdate();
     }
     else if (!outClicked && !ellipsisToggle) {
-      console.log("ELSE IF 3")
       setEllipsisToggle(true);
       forceUpdate();
     }
- 
+
 
     const toggle = !ellipsisToggle;
     console.log("toggle after handling is: " + ellipsisToggle);
@@ -426,8 +407,8 @@ function Item({ item, index, removeItem }) {
 
   return (
         <div ref={wrapperRef}>
-          <div className="itemPad" id="dropdown" data-dropdown
-                  onMouseUpCapture = {padClickCheck}>
+          <div className="itemPad" id="dropdown" data-dropdown>
+
             <div className="regItem" style={{backgroundColor: itemColor[0],
               boxShadow: itemColor[1]}} type="submit"
                   onMouseOver={addItemHoverShadow} 
