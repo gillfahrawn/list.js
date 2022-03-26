@@ -1,5 +1,5 @@
-[List App](http://listsjs.s3-website-us-east-1.amazonaws.com/) 
-Compatible with Chrome, Firefox, and Android devices. 
+[List App](http://listsjs.s3-website-us-east-1.amazonaws.com/)  
+Compatible with Chrome, Firefox, and Android devices  
 Click [here](http://listsjs.s3-website-us-east-1.amazonaws.com/) for Demo
 Run:
 
