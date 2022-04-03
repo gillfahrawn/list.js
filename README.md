@@ -1,4 +1,4 @@
-[List App](http://listsjs.s3-website-us-east-1.amazonaws.com/)  
+[List.js App](http://listsjs.s3-website-us-east-1.amazonaws.com/)  
 Compatible with Chrome, Firefox, and Android devices  
 Click [here](http://listsjs.s3-website-us-east-1.amazonaws.com/) for Demo    
 To run locally, download and cd into the project directory (/listjs), and run:
